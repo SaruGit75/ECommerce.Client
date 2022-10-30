@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+        <div class="mb-3">
+            <label for="username" class="form-label">User Name</label>
+            <input #txtUserNameorEmail type="text" id="username" class="form-control" placeholder="UserName & E-mail">
+            <small class="form-text text-muted invalid-feedback">
+                Please fill in the blank with correct username.
+            </small>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input #txtPassword type="password" formControlName="password" id="password" class="form-control"
+                placeholder="Password">
+        </div>
+        <br>
+        <button style="margin-top: 5px;" type="submit" class="btn btn-primary"
+            (click)="login(txtUserNameorEmail.value, txtPassword.value)">Sign In</button>
+    </div>
+    <div class="col-md-3"></div>
+</div>
